@@ -1,0 +1,63 @@
+" pluginy pro markdown support
+" :h vim-markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
+" If you follow a link like this '[link text](link-url)' using the 'ge' shortcut,
+" this option will automatically save any edits you made before moving you:
+let g:vim_markdown_autowrite = 1
+
+" bash-support
+"Plugin 'bash-support.vim'
+
+" html plugin
+Plugin 'mattn/emmet-vim'
+
+" https://github.com/lifepillar/pgsql.vim
+" zvyraznovani a doplnovani syntaxe pro postgresql
+" pri pouziti z psql idealni kombinace :-)
+"Plugin 'lifepillar/pgsql.vim'
+
+" default pro fsechny sql
+"let g:sql_type_default = 'pgsql'
+
+" JavaScript development
+" https://github.com/prettier/prettier
+"Plugin 'prettier/prettier'
+
+" https://github.com/dense-analysis/ale
+"Plugin 'dense-analysis/ale'
+
+"augroup shaperd
+"	au!
+"	" Automatically choose the correct dbext profile
+"	autocmd BufRead */shaperd/* DBSetOption profile=shaperd
+"augroup end
+
+" doxygen - pro generovani dokumentace z kodu
+Plugin 'vim-scripts/DoxygenToolkit.vim'
+
+"let g:load_doxygen_syntax=1
+"let g:doxygen_enhanced_color=1
+"// vim:syntax=cpp.doxygen
+
+" GDB inside vim - moc sikonvy to neni, stejne jsem to moc nepouzival
+" debugovani c++ primo ve vimu vcetne vypisu promennych atd
+" https://github.com/vim-scripts/Conque-GDB
+"Plugin 'vim-scripts/Conque-GDB'
+
+" otvirani ConqueGdb napravo
+let g:ConqueGdb_SrcSplit = 'right'
+" povoli prikazy z kodu
+let g:ConqueTerm_ReadUnfocused = 1
+
+" Vim plug for switching between companion source files (e.g. .h and .cpp)
+Plugin 'derekwyatt/vim-fswitch'
+
+" doplnovani, kontroly atd pro C++
+Plugin 'Valloric/YouCompleteMe'
+
+" prochazeni erroru pomoci :lnext :lprevious
+let g:ycm_always_populate_location_list = 1
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'

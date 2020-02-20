@@ -1,0 +1,59 @@
+# obarveni vypisu ls
+alias ll='ls -lha --color=auto '
+
+# obarveni vypisu grepu
+alias grep='grep --color=auto '
+
+# slouzi k odstraneni stareho, nefunkcniho zaznamu z known_hosts
+alias unkey="ssh-keygen -f ~/.ssh/known_hosts -R"
+
+# alias pro rdesktop - spis pro priklad pouziti
+#alias rdp1920='rdesktop -g1920x1044 -D -N -k en-us -N -a 16 -x broadband -r clipboard:PRIMARYCLIPBOARD -r disk:share=/mnt/data/Downloads'
+
+# alias pro rdesktop - spis pro priklad pouziti
+alias rdp='rdesktop -gworkarea -B -D -N -k en-us -a 32 -x broadband -r clipboard:PRIMARYCLIPBOARD -r disk:share=/home/vaclavz/Downloads'
+
+# rychle otevreni /var/log/messages
+alias vmess='vim /var/log/messages'
+
+# rychle otevreni /var/log/maillog
+alias vmail='vim /var/log/maillog'
+
+# rychle otevreni /var/log/scripty.log
+alias vscript='vim /var/log/scripty.log'
+
+# rychle otevreni /var/log/syslog - hlavne ubuntu a debian
+alias vsys='vim /var/log/syslog'
+
+# vypis clenu skupiny na sambe 4
+alias group_list='echo -e "zadej nazev skupiny:";read group_name;echo -e "vypis clenu pro $group_name:";for user in $(samba-tool group listmembers "$group_name");do getent passwd "$user" | cut -d':' -f5;done'
+
+# rsync backup pro rychlou, plnou zalohu
+alias rsync-full-backup='rsync -aA --delete --exclude="/dev" --exclude="/proc" --exclude="/sys" --exclude="/tmp" --exclude="/run" --exclude="/lost+found" --exclude="/mnt" /'
+
+# slouzi pro spusteni smycky pro spousteni scriptu backup kazdou minutu - od prechodu na git netreba
+#alias backup-loop='while true;do sleep 60;backup;done >/dev/null &'
+
+# slouzi pro zastaveni zalohovaci smycky - vice info viz backup-loop
+#alias backup-kill='kill %1'
+
+# alias pro stare mikrotiky, ktere nefunguji s novou verzi ssh
+alias mkssh='ssh -o KexAlgorithms=diffie-hellman-group14-sha1 -o HostKeyAlgorithms=+ssh-dss'
+
+# alias pro spusteni ulohy Backup ve veeamu
+alias vbackup='sudo veeamconfig job start --name "Backup"'
+
+# alias pro nacitani defaultni session ve vimu
+#alias vim='[ -f Session.vim ] && vim -S Session.vim|| vim'
+
+# alias pro tmux, aby se poustel vzdy v 256 barvach
+alias tmux='tmux -2'
+
+#alias pro spusteni zalohy veeamu s nazvem Backup
+alias veeamBackup='sudo veeamconfig job start --name Backup'
+
+# slouzi pro rekompilaci ycm
+alias rebuildYCM='~/.vim/bundle/YouCompleteMe/install.py --clang-completer'
+
+# slouzi pro alias pro ipv6
+alias ip6='ip -6'

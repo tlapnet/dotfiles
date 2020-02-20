@@ -1,0 +1,47 @@
+pane	Local	1	:tmux	0	:-	1	:/home/rslsync/Sync/Programming/linux/dotfiles/tmux/resurrect	1	zsh	:
+pane	Local	2	:ssh	0	:	1	:/home/rslsync/Sync/Programming/linux/dotfiles/ssh	1	zsh	:
+pane	Local	3	:Downloads	0	:	1	:/home/vaclavz/Downloads	1	zsh	:
+pane	Local	4	:zsh	1	:*	1	:/home/rslsync/Sync/Programming/linux/dotfiles/vim	1	zsh	:
+pane	Programming	1	:nadhled	0	:	1	:/home/vaclavz/Tlapnet/nadhled	1	zsh	:
+pane	Programming	2	:radius	1	:*	1	:/home/vaclavz/Tlapnet/radius	1	zsh	:
+pane	Programming	3	:dokumentace	0	:-	1	:/home/vaclavz/Tlapnet/tlapnet-farm	1	zsh	:
+pane	Shaperd	1	:shaperd	0	:	1	:/home/vaclavz/Tlapnet/shaperd	1	zsh	:
+pane	Shaperd	2	:etc	0	:	1	:/home/vaclavz/Tlapnet/shaperd/extras/konfigurace-shaperu/etc	1	zsh	:
+pane	Shaperd	3	:kernel	0	:	1	:/home/vaclavz/Tlapnet/shaperd/extras/konfigurace-shaperu/kernel	1	zsh	:
+pane	Shaperd	4	:build	0	:	1	:/home/vaclavz/Tlapnet/shaperd/build	1	zsh	:
+pane	Shaperd	5	:extras	1	:*	1	:/home/vaclavz/Tlapnet/shaperd/extras	1	zsh	:
+pane	Shaperd	6	:sbin	0	:	1	:/home/vaclavz/Tlapnet/shaperd/extras/konfigurace-shaperu/sbin	1	zsh	:
+pane	Shaperd	7	:sql	0	:	1	:/home/vaclavz/Tlapnet/shaperd/sql	1	zsh	:
+pane	Shaperd	8	:scripts	0	:-	1	:/home/vaclavz/Tlapnet/shaperd/extras/konfigurace-shaperu	1	zsh	:
+pane	shd-	1	:lib	0	:	1	:/home/vaclavz/Tlapnet/shaperd/projects/lib	1	zsh	:
+pane	shd-	2	:admslave	0	:	1	:/home/vaclavz/Tlapnet/shaperd/projects/shd-admslave	1	zsh	:
+pane	shd-	3	:monitord	0	:	1	:/home/vaclavz/Tlapnet/shaperd/projects/shd-monitord	1	zsh	:
+pane	shd-	4	:netcheck	0	:-	1	:/home/vaclavz/Tlapnet/shaperd/projects/shd-netcheck	1	zsh	:
+pane	shd-	5	:qosd	0	:	1	:/home/vaclavz/Tlapnet/shaperd/projects/shd-qosd	1	zsh	:
+pane	shd-	6	:tcd	1	:*	1	:/home/vaclavz/Tlapnet/shaperd/projects/shd-tcd	1	zsh	:
+pane	shd-	7	:webview	0	:	1	:/home/vaclavz/Tlapnet/shaperd/projects/shd-webview	1	zsh	:
+pane	shd-	8	:sql	0	:	1	:/home/vaclavz/Tlapnet/shaperd/sql	1	zsh	:
+window	Local	1	0	:-	d3df,239x68,0,0,2
+window	Local	2	0	:	ea25,239x68,0,0,26
+window	Local	3	0	:	d3e0,239x68,0,0,3
+window	Local	4	1	:*	ea26,239x68,0,0,27
+window	Programming	1	0	:	d3de,239x68,0,0,1
+window	Programming	2	1	:*	ea23,239x68,0,0,24
+window	Programming	3	0	:-	ea24,239x68,0,0,25
+window	Shaperd	1	0	:	6a22,239x68,0,0,13
+window	Shaperd	2	0	:	6a23,239x68,0,0,14
+window	Shaperd	3	0	:	6a24,239x68,0,0,15
+window	Shaperd	4	0	:	6a25,239x68,0,0,16
+window	Shaperd	5	1	:*	6a26,239x68,0,0,17
+window	Shaperd	6	0	:	6a27,239x68,0,0,18
+window	Shaperd	7	0	:	6a28,239x68,0,0,19
+window	Shaperd	8	0	:-	ea1f,239x68,0,0,20
+window	shd-	1	0	:	d3e1,239x68,0,0,4
+window	shd-	2	0	:	d3e2,239x68,0,0,5
+window	shd-	3	0	:	d3e3,239x68,0,0,6
+window	shd-	4	0	:-	d3e4,239x68,0,0,7
+window	shd-	5	0	:	d3e5,239x68,0,0,8
+window	shd-	6	1	:*	d3e6,239x68,0,0,9
+window	shd-	7	0	:	6a1f,239x68,0,0,10
+window	shd-	8	0	:	6a20,239x68,0,0,11
+state	Local	shd-

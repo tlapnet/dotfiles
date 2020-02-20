@@ -1,0 +1,74 @@
+# manual /usr/share/doc/astyle/html/astyle.html
+# slozene zavorky jsou zalomene
+--style=allman
+
+# vynechani formatovani v kodu - pro sql a json
+# // *INDENT-OFF*
+# // *INDENT-ON*
+
+# odsazovani tabulatorem, pokracovani mezerami
+--indent=tab=2
+
+# odsazeni public a private v ramci tridy
+--indent-modifiers
+
+# odsazeni case ve switchi
+--indent-switches
+
+# odsazeni v ramci namespace
+--indent-namespaces
+
+# odsazeni pokracujicich radku
+--indent-continuation=4
+
+# zarovnani podminek pro preprocesor
+--indent-preproc-block
+
+# zarovnani comentu
+--indent-col1-comments
+
+# vypnuti odskoceni podminek pri viceradkovem ifu
+--min-conditional-indent=0
+
+# maximalni zarovnani vnorenych definic, argumentu atd
+--max-instatement-indent=100
+
+# doplneni prazdnych radku kolem ifu atd
+--break-blocks
+
+# doplneni mezer kolem operatoru
+--pad-oper
+
+# doplneni mezer za carky
+--pad-comma
+
+# mezera za if atd
+--pad-header
+
+# vymazani prazdnych radku, kde jsou zbytecne - maze to i tam kde jsou zamerne
+#--delete-empty-lines
+
+# automaticke zarovnani pointeru a referenci k typu
+--align-pointer=type
+
+# doplni zavorky k ifum a forum, kde schazeji
+--add-brackets
+
+# i pro jednoradkove zalezitosti
+--add-one-line-brackets
+
+# nerozbiji veci, ktere jsou na jednom radku a vejdou se tam - accessory
+--keep-one-line-statements
+
+# maze mezery mezi zavorkami a funkcemi, vnorenymi zavorkami atd
+--unpad-paren
+
+# slouci > > u definic typu do >>
+--close-templates
+
+# maximalni delka kodu a odradkovani za podminkami
+--max-code-length=114
+--break-after-logical
+
+# typ jazyka c-family
+--mode=c

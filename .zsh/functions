@@ -1,0 +1,533 @@
+#!/bin/bash
+# FUNCTIONS
+# _svim
+# _rgrep
+# _sedscript
+# _mkproject
+# _ggg
+# _ggd
+# _ggt
+# _ggm
+# _ggms
+# _status_all
+# _pull_all
+
+# _archiv_funkci
+# _sessionmux
+# xscr
+# xRscExport
+# xRscImport
+# xTxtExport
+
+# pokud je novejsi soubor v syncu [ -nt ], pak ho zkopiruje do ~/.ssh
+# uz to neni potreba, protoze .ssh je linkovana slozka
+#[ ! -d ~/.ssh ] && mkdir -p ~/.ssh
+#[ ! -f ~/.ssh/config ] && cp --update ~/Programming/linux/dotfiles/ssh/config ~/.ssh/config
+#[ ~/Programming/linux/dotfiles/ssh/config -nt ~/.ssh/config ] && cp --update ~/Programming/linux/dotfiles/ssh/config ~/.ssh/config
+#[ $(stat --format '%a' ~/.ssh/config) != 600 ] && chmod 600 ~/.ssh/config
+
+# pokud je ulozena session, tak ji nacte
+# _svim
+svim()
+{
+	if [ -f Session.vim ]
+	then
+		vim $@ -S Session.vim
+	else
+		vim $@
+	fi
+}
+
+# funkce pro rekurzivni grep, kdy se hledana hodnota zadava jako parametr
+# _rgrep
+rgrep()
+{
+	# kontroluje, zda je predan parametr
+	if [ -n "$1" ] 
+	then
+		grep --color=auto -R "$1" *
+	else 
+		echo "nebyl zadan parametr"
+	fi
+}
+
+# slouzi pro prepsani defaultnich parametru pro posilani mailu a logovani
+# jako parametr musi mit nazev souboru, kteremu doplni na zacatek vaclavz-
+# _sedscript
+sedscript()
+{
+	# kontroluje, zda je predan parametr
+	if [ -n "$1" ] 
+	then
+		# na cygwinu to samozrejme nejde
+		#sed -e "s/192.168.255.3/$(ip addr | grep 192.168.10 | sed -e 's/^.*inet\ //g' -e 's/\/24.*$//g' | head -1)/g"\
+		sed -e "s/192.168.255.3/192.168.10.34/g"\
+			-e 's/davfia@atlas.cz/vaclavz@vaclavz.local/g' -e 's/\([^\[]\)\(\/system logging\)/\1#\2/g' "$1" > vaclavz-"$1"
+	else
+		echo "nebyl zadan parametr"
+	fi
+}
+
+# slouzi pro vytvoreni noveho projektu a pridani do gitu
+# jako parametr musi mit nazev projektu
+# _mkproject
+mkproject()
+{
+	# kontroluje, zda je predan parametr
+	if [ -n "$1" ] 
+	then
+		# vytvoreni slozek bin a src
+		mkdir -p "$1"/src
+
+		# uprava prav, aby tam nebylo 777, nehezky to sviti
+		chmod -R o-rwx "$1"
+
+		# pridani cele slozky do gitu
+		git add "$1"
+		git commit -m "vytvoren a pridan novy projekt $1"
+
+		cd "$1"/src
+
+
+		# pokud neexistuje main.cpp nahraje do nej sablonu
+		if [ $(pwd | grep -c "code-abbey") -ne 0 ] && [ ! -f main.cpp ]
+		then
+			echo "/*	main.cpp - $1
+ * popis:	
+ */
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main( int argc, char *argv[] )
+{
+    // i - at je to stejne jako vsude jinde
+    int i, inputLines;
+
+    // vector pro zaznamenani vysledku
+    vector<string> results;
+
+    // nacteni poctu vstupnich radku
+    cin >> inputLines;
+    cin.ignore();
+    
+    for ( i = 0; i < inputLines; i++ )   
+    {   
+        //cin >> weight >> height;
+
+    }
+            
+	// vypsani vysledku
+    for ( i = 0; i < inputLines; i++ )
+    {
+        cout << results[i] << \" \";
+    }
+
+}
+" > main.cpp
+		# pokud neni cest do code-abbey
+		elif [ $(pwd | grep -c "code-abbey") -eq 0 ] && [ ! -f main.cpp ]
+		then
+			echo "/*	main.cpp - $1
+ * popis:	
+ */
+
+#include <iostream>
+
+using namespace std;
+
+int main( int argc, char *argv[] )
+{
+
+}
+" > main.cpp
+		fi
+
+		# otevreni noveho souboru main.cpp ve vimu
+		vim main.cpp
+	else
+		echo "nebyl zadan parametr"
+	fi
+}
+
+# slouzi pro commit, push a vypis statusu
+# _ggg
+ggg()
+{
+	# provede commit vsech zmenenych souboru 
+	# pridavat se musi rucne pres git add - potreba toho se vypise ve statusu
+	# nakonec uploaduje zmeny na server
+	git commit -a && git status && git push --all
+}
+
+# _ggd
+ggd()
+{
+	# provede prepnuti zpet na branch development
+	git checkout development && git status
+}
+
+# _ggt
+ggt()
+{
+	# provede kolecko checkout, merge, push a checkout zpet
+	git checkout testing && git merge development && git push --all && git checkout development
+}
+
+# _ggm
+ggm()
+{
+	# provede kolecko checkout, merge, push a checkout zpet
+	git checkout && git merge testing && git push --all && git checkout development
+}
+
+# _ggms
+ggms()
+{
+	# provede kolecko checkout, merge, commit, push a checkout zpet
+	git checkout && git merge testing --squash && git commit && git push --all && git checkout development
+}
+# slouzi pro zjisteni stavu vsech git projektu
+# jako vstupni data slouzi soubor ~/.gitProjects
+# _status_all
+status-all()
+{
+	# pokud existuje soubor se vstupnimi hodnotami, provede kontrolu vsech projektu
+	if [ -f ~/.gitProjects ]
+	then
+		# ulozi cestu do aktualniho adresare, pak se vrati zpet, aby nezustaval v nekterem z projektu
+		initialDir="$PWD"
+
+		# nacte vsechny radky ze vstupniho souboru a zpracuje je jeden po jednom
+		# < ~/.gitProjects - nakrmi while, ktery vse nacita do promenne $line
+		while read line
+		do
+			# vypise nazev projektu do konzole pro lepsi prehlednost, odradkovani na zacatku i na konci
+			echo "\nProject: $line\n"
+
+			# cd do zpracovavane slozky
+			cd ~/"$line"
+
+			# grep --color obarvi vystup, asi by to nemuselo byt nutne, protoze mam alias na --color=always
+			# dulezite kouzlo je -E (nahraditelne egrepem), kdy se hleda kazdy zacatek radku ^ a pak vyraz
+			# kouzlo je v tom, ze vypise vse, co se na nej posle a k tomu zvyrazni hledany text
+			git status | grep --color -E "^|up-to-date|nothing to commit, working directory clean"
+		done < ~/.gitProjects
+
+		# navrat do puvodni slozky
+		cd "$initialDir"
+	else
+		echo "neexistuje vstupni soubor ~/.gitProjects"
+	fi
+}
+
+# slouzi pro pull vsech projektu
+# jako vstupni data slouzi soubor ~/.gitProjects
+# _pull_all
+pull-all()
+{
+	# pokud existuje soubor se vstupnimi hodnotami, provede pull vsech projektu
+	if [ -f ~/.gitProjects ]
+	then
+		# ulozi cestu do aktualniho adresare, pak se vrati zpet, aby nezustaval v nekterem z projektu
+		initialDir="$PWD"
+
+		# nacte vsechny radky ze vstupniho souboru a zpracuje je jeden po jednom
+		# < ~/.gitProjects - nakrmi while, ktery vse nacita do promenne $line
+		while read line
+		do
+			# vypise nazev projektu do konzole pro lepsi prehlednost, odradkovani na zacatku i na konci
+			echo "\nProject: $line\n"
+
+			# cd do zpracovavane slozky
+			cd ~/"$line"
+			git pull --all | grep --color -E "^|up-to-date|nothing to commit, working directory clean"
+		done < ~/.gitProjects
+
+		# navrat do puvodni slozky
+		cd "$initialDir"
+	else
+		echo "neexistuje vstupni soubor ~/.gitProjects"
+	fi
+}
+
+# funkce pro spusteni screenu
+# _archiv_funkci
+# funkce pro start tmux sessionu
+# _sessionmux
+#sessionmux()
+#{
+#	if [ -n "$1" ]
+#	then
+#		if cd ~/shaperd/testovani/projects/$1
+#		then
+#			#tmux -2 new-session -s "$1"
+#			tmux renamew vim
+#			tmux new-window -n bin
+#			tmux new-window -n root 'sudo -s'
+#			tmux new-window -n log -c '/var/log/shaperd/'
+#			tmux new-window -n man
+#			tmux new-window -n zsh
+#			tmux selectw -t 1
+#			vim -S
+#		fi
+#	else
+#		echo "je potreba zadat nazev projektu jako parametr"
+#		echo "sessionmux projekt"
+#	fi
+#}
+
+#### stare, zahashovane funkce
+
+#archive()
+#{
+#	# adds all backed up files to .backup/backup.zip and deletes them
+#	if [ -d "$PWD/.backup" ]
+#	then
+#		find .backup -type f -mtime +1 \! -name "backup.zip" -name "*--*" -exec zip -T --move .backup/backup.zip {} \;
+#		backup
+#	else
+#		printf "%s\n" "backup folder not present, do you want to backup now? (y/n)"
+#		read reply
+#		if [ "$reply" = "y" ] || [ "$reply" = "yes" ]
+#		then
+#			backup
+#		else
+#			printf "%s\n" "skipping backup, nothing to archive"
+#		fi
+#	fi
+#}
+
+## slouzi pro kompilaci c++ kodu, pokud je predan parametr a ma koncovku cpp
+## compile c++ code
+## vystupni soubory uklada do slozky bin, aby se nemotaly
+#ccc()
+#{
+#	# pokud je posledni slozka v nazvu cesty src, pak vystup umisti do ../bin
+#	if [ ${PWD##*/} = "src" ]
+#	then
+#		# kontrola, zda existuje vystupni slozka bin
+#		if [ ! -d ../bin ]
+#		then
+#			echo "vytvarim slozku pro vystupni soubor"
+#			# pokud ne, tak ji vytvori
+#			mkdir ../bin
+#		fi
+#
+#		# kontroluje, zda je predan parametr
+#		if [ -n "$1" ] 
+#		then
+#			echo "kompilace ($1) - vystup (../bin/${1%.cpp})"
+#			g++ -g -Wall "$1" -o "../bin/${1%.cpp}"
+#
+#			# pridani obou souboru do gitu
+#			git add "../bin/${1%.cpp}" "$1"
+#		else
+#			echo "nebyl zadan parametr"
+#		fi
+#	# pokud neni posledni slozka src, pak neni kompilovan projekt z cpp-series a kompiluje se normalne
+#	else
+#		# kontrola, zda existuje vystupni slozka bin
+#		if [ ! -d bin ]
+#		then
+#			echo "vytvarim slozku pro vystupni soubor"
+#			# pokud ne, tak ji vytvori
+#			mkdir bin
+#		fi
+#	
+#		# kontroluje, zda je predan parametr
+#		if [ -n "$1" ] 
+#		then
+#			echo "kompilace ($1) - vystup (bin/${1%.cpp})"
+#			g++ -g -Wall "$1" -o "bin/${1%.cpp}"
+#
+#			# pridani obou souboru do gitu
+#			git add "$1" "bin/${1%.cpp}"
+#		else
+#			echo "nebyl zadan parametr"
+#		fi
+#	fi
+#}
+#
+## slouzi pro spusteni zkompilovaneho c++ kodu, aby nebylo nutne stale psat bin/
+## run c++ code
+## spousti soubory ukladane do slozky bin, aby se nemotaly
+#rcc()
+#{
+#	# pokud je posledni slozka v nazvu cesty src, pak vystup umisti do ../bin
+#	if [ ${PWD##*/} = "src" ]
+#	then
+#		echo "${PWD##*/}"
+#		# kontrola, zda existuje vystupni slozka bin
+#		if [ ! -d ../bin ]
+#		then
+#			echo "uz jsi zkompiloval kod? Neexistuje vystupni slozka"
+#		else
+#			# zkontroluje, zda je predan parametr
+#			if [ -n "$1" ] 
+#			then
+#				# zkontroluje, zda nebezi na cygwinu. Pokud ano, pousti .exe
+#				if [ $(uname -a | grep -ci "cygwin") -ne 0 ]
+#				then
+#					echo "spoustim (../bin/${1%.cpp}) v prostredi cygwinu"
+#					../bin/${1%.cpp}.exe "$@"
+#				else
+#
+#					echo "spoustim (../bin/${1%.cpp}) v linuxovem prostredi"
+#					../bin/${1%.cpp} "$@"
+#				fi
+#			else
+#				echo "nebyl zadan parametr"
+#			fi
+#		fi
+#	# pokud neni posledni slozka src, pak neni kompilovan projekt z cpp-series a kompiluje se normalne
+#	else
+#		# kontrola, zda existuje vystupni slozka bin
+#		if [ ! -d bin ]
+#		then
+#			echo "uz jsi zkompiloval kod? Neexistuje vystupni slozka"
+#		else
+#			# zkontroluje, zda je predan parametr
+#			if [ -n "$1" ] 
+#			then
+#				# zkontroluje, zda nebezi na cygwinu. Pokud ano, pousti .exe
+#				if [ $(uname -a | grep -ci "cygwin") -ne 0 ]
+#				then
+#					echo "spoustim (bin/${1%.cpp}) v prostredi cygwinu"
+#					bin/${1%.cpp}.exe "$@"
+#				else
+#					echo "spoustim (bin/${1%.cpp}) v linuxovem prostredi"
+#					bin/${1%.cpp} "$@"
+#				fi
+#			else
+#				echo "nebyl zadan parametr"
+#			fi
+#		fi
+#	fi
+#}
+#
+## slouzi pro spusteni zkompilovaneho c++ kodu v debuggeru
+## debug c++ code
+## spousti soubory ukladane do slozky bin, aby se nemotaly
+#rgc()
+#{
+#	# pokud je posledni slozka v nazvu cesty src, pak vystup umisti do ../bin
+#	if [ ${PWD##*/} = "src" ]
+#	then
+#		# kontrola, zda existuje vystupni slozka bin
+#		if [ ! -d ../bin ]
+#		then
+#			echo "uz jsi zkompiloval kod? Neexistuje vystupni slozka"
+#		else
+#			# zkontroluje, zda je predan parametr
+#			if [ -n "$1" ] 
+#			then
+#				# zkontroluje, zda nebezi na cygwinu. Pokud ano, pousti .exe
+#				if [ $(uname -a | grep -ci "cygwin") -ne 0 ]
+#				then
+#					echo "spoustim (../bin/${1%.cpp}) v prostredi cygwinu"
+#					gdb ../bin/${1%.cpp}.exe
+#				else
+#
+#					echo "spoustim (../bin/${1%.cpp}) v linuxovem prostredi"
+#					gdb ../bin/${1%.cpp}
+#				fi
+#			else
+#				echo "nebyl zadan parametr"
+#			fi
+#		fi
+#	# pokud neni posledni slozka src, pak neni kompilovan projekt z cpp-series a kompiluje se normalne
+#	else
+#		# kontrola, zda existuje vystupni slozka bin
+#		if [ ! -d bin ]
+#		then
+#			echo "uz jsi zkompiloval kod? Neexistuje vystupni slozka"
+#		else
+#			# zkontroluje, zda je predan parametr
+#			if [ -n "$1" ] 
+#			then
+#				# zkontroluje, zda nebezi na cygwinu. Pokud ano, pousti .exe
+#				if [ $(uname -a | grep -ci "cygwin") -ne 0 ]
+#				then
+#					echo "spoustim (bin/${1%.cpp}) v prostredi cygwinu"
+#					gdb bin/${1%.cpp}.exe
+#				else
+#
+#					echo "spoustim (bin/${1%.cpp}) v linuxovem prostredi"
+#					gdb bin/${1%.cpp}
+#				fi
+#			else
+#				echo "nebyl zadan parametr"
+#			fi
+#		fi
+#	fi
+#}
+# xscr
+#scr()
+#{
+#    if [ ! -d /var/run/screen ]
+#	then
+#    	sudo mkdir -p /var/run/screen
+#        sudo chmod 777 /var/run/screen
+#    fi
+#    screen -d -R
+#}
+
+# xRscExport
+# funkce slouzi pro export a stazeni scriptu ze scriptovaciho mikrotiku
+# predpoklada zaznam s nazvem scriptovaci v ~/.ssh/config a idealne sparovani ssh klicem
+#Host scriptovaci
+#    HostName 192.168.10.12
+#    user scripts
+# pouziti: vola se ze slozky, kam je zadouci stahnout script
+#		   /home/vaclavz/Dropbox/Programming/Mikrotik/BatchTelnet/compacts/
+#RscExport()
+#{
+#	echo "Export vsech scriptu na scriptovacim mk"
+#	ssh scriptovaci '/system script export file=scriptovaci'
+#
+#	echo -e "\nStazeni exportu ze scriptovaciho mk"
+#	scp scriptovaci:scriptovaci.rsc .
+#}
+
+# xRscImport
+# funkce slouzi pro nahrani a import scriptu do testovaciho mikrotiku
+# predpoklada zaznam s nazvem testovaci v ~/.ssh/config a idealne sparovani ssh klicem
+#Host testovaci
+#    HostName 192.168.10.13
+#    user scripts
+# pouziti: vola se ze slozky, kde je pozadovany rsc script
+#		   /home/vaclavz/Dropbox/Programming/Mikrotik/BatchTelnet/compacts/jenPockejRadare
+#RscImport()
+#{
+#	# zkontroluje, zda predany parametr neni nulovy
+#	if [ -n "$1" ]
+#	then
+#		echo "Probehne nahrani a import scriptu na testovaci mikrotik"
+#		scp "$1" testovaci:
+#		ssh testovaci "/import ${1##*/}"
+#	else
+#		echo "Nebyl predan parametr s nazvem rsc souboru"
+#		echo "pouziti RscImport file.rsc"
+#	fi
+#}
+
+# xTxtExport
+# funkce slouzi pro export a stazeni scriptu ze scriptovaciho mikrotiku v citelne podobe
+# predpoklada zaznam s nazvem scriptovaci v ~/.ssh/config a idealne sparovani ssh klicem
+#Host scriptovaci
+#    HostName 192.168.10.12
+#    user scripts
+# pouziti: vola se ze slozky, kam je zadouci stahnout script v citelne podobe a kde jsou prislusne txt soubory
+#			/home/vaclavz/Dropbox/Programming/Mikrotik/BatchTelnet/compacts/jenPockejRadare
+#TxtExport()
+#{
+#	for file in $(ls *.txt)
+#	do
+#		ssh scriptovaci ":put [/system script get ${file%.txt} source]" > "$file"
+#	done
+#}
+
