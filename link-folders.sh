@@ -1,7 +1,6 @@
 #!/bin/bash
-# script pro nalinkovani potrebnych slozek a souboru - prvni spusteni je nutne provest jako root
-# zaroven musi byt v repozitari https://git.tlapnet.cz/vaclavz/dotfiles povolen ssh klic roota na prislusnem
-# serveru. Dale lze poustet pod jednotlivymi uzivatli, kteri maji sudo opravneni - kdo nema, ma smulu
+# Script pro nalinkovani potrebnych slozek a souboru - prvni spusteni je nutne provest jako root.
+# Dale lze poustet pod jednotlivymi uzivatli, kteri maji sudo opravneni - kdo nema, ma smulu
 
 #_LOG
 #_LOGERROR
@@ -41,7 +40,6 @@ if [ "$1" = "-h" -o "$1" = "--help" ]
 then
 	echo -e "script pro nalinkovani potrebnych slozek a souboru
 - prvni spusteni je nutne provest jako root
-- zaroven musi byt v repozitari https://git.tlapnet.cz/vaclavz/dotfiles povolen ssh klic roota
 - dale lze poustet pod jednotlivymi uzivatli, kteri maji sudo opravneni - kdo nema, ma smulu
 parametry:
 -h | --help\t\t\tvypis napovedy
