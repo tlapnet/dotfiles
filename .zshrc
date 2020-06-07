@@ -34,6 +34,11 @@ if [ -d "/snap/bin" ] ; then
     PATH="/snap/bin:$PATH"
 fi
 
+# adds pip packages into path if exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 # OPTIONS
 # zabranuje tvoreni duplicit
 setopt histignoredups 
