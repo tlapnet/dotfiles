@@ -55,7 +55,8 @@ let g:ConqueTerm_ReadUnfocused = 1
 Plugin 'derekwyatt/vim-fswitch'
 
 " doplnovani, kontroly atd pro C++
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'ycm-core/YouCompleteMe'
 
 " prochazeni erroru pomoci :lnext :lprevious
 let g:ycm_always_populate_location_list = 1
