@@ -56,13 +56,13 @@ fi
 # user_group_setup
 # vytvori skupinu a prida aktualniho uzivatele do skupiny - uzivatel musi mit sudo opravneni
 # diky clenstvi ve skupine ma uzivatel pristup ke vsem konfiguracnim souborum
-sudo addgroup "$configGroup"
+(sudo addgroup "$configGroup" || sudo groupadd "$configGroup") 2> /dev/null
 sudo adduser "$USER" "$configGroup"
 
 Log "Overen, doplnen uzivatel do skupiny pro dotfiles"
 
 # instalace_acl_pro_setfacl
-if ! sudo apt -y install acl
+if ! (sudo apt -y install acl 2> /dev/null || sudo yum install -y acl 2> /dev/null)
 then
 	LogError "Nepodarilo se nainstalovat"
 	exit "$exitValue"
