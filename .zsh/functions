@@ -178,17 +178,20 @@ ggt()
 }
 
 # _ggm
+# slouzi pro merge testing do pozadovane branche a navrat na branch development
+# ggm <master>
 ggm()
 {
 	# provede kolecko checkout, merge, push a checkout zpet
-	git checkout && git merge testing && git push --all && git checkout development
+	git checkout "$1" && git merge testing && git push --all && git checkout development
 }
 
 # _ggms
+# ggms <master>
 ggms()
 {
 	# provede kolecko checkout, merge, commit, push a checkout zpet
-	git checkout && git merge testing --squash && git commit && git push --all && git checkout development
+	git checkout "$1" && git merge testing --squash && git commit && git push --all && git checkout development
 }
 # slouzi pro zjisteni stavu vsech git projektu
 # jako vstupni data slouzi soubor ~/.gitProjects
