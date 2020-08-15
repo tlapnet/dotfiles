@@ -161,6 +161,11 @@ set smarttab			" deletes whole inserted tab
 set foldmethod=indent
 set foldlevel=99
 
+" upravena definice vim sessionu, aby se nevkladalo cd do cilove slozky,
+" neloadovaly se nezobrazene buffery a neukladaly se foldy, ktere akorat
+" zdrzuji pri nacitani vimu
+set sessionoptions=sesdir,options,tabpages,winsize,terminal,unix,winpos
+
 " automatization of folds
 "augroup AutoSaveFolds
 "  autocmd!
@@ -279,7 +284,7 @@ augroup c_development
 
 	" build
 	"autocmd filetype cpp nnoremap <F4> :wa <bar> exec '!make rebuild'<CR>
-	autocmd filetype cpp nnoremap <F4> :wa <bar> exec '!make clean && make -j'<CR>
+	autocmd filetype cpp nnoremap <F4> :wa <bar> exec '!make clean && make -j$(nproc)'<CR>
 	" build and debug
 	" podminkou je, ze se vystup kompilace musi jmenovat program, aby to bylo
 	" univerzalni
