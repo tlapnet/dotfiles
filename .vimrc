@@ -164,7 +164,7 @@ set foldlevel=99
 " upravena definice vim sessionu, aby se nevkladalo cd do cilove slozky,
 " neloadovaly se nezobrazene buffery a neukladaly se foldy, ktere akorat
 " zdrzuji pri nacitani vimu
-set sessionoptions=sesdir,options,tabpages,winsize,terminal
+set sessionoptions=sesdir,options,tabpages,winsize
 
 " automatization of folds
 "augroup AutoSaveFolds
