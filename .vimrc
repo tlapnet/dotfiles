@@ -205,14 +205,19 @@ augroup logs
 	autocmd BufEnter,BufReadPre /var/log/nadhled/* set filetype=messages
 	autocmd BufEnter,BufReadPre /var/log/nadhled/* set filetype=shaperd
 
+	autocmd BufEnter,BufReadPre /var/log/TBot/* set filetype=messages
+	autocmd BufEnter,BufReadPre /var/log/TBot/* set filetype=shaperd
+
 	autocmd BufEnter,BufReadPre /var/log/scripty/* set filetype=messages
 
 	autocmd BufEnter /var/log/shaperd/* set autoread
+	autocmd BufEnter /var/log/TBot/* set autoread
 	autocmd BufEnter /var/log/nadhled/* set autoread
 	autocmd BufEnter /var/log/scripty/* set autoread
 	autocmd BufEnter /var/log/*.log set autoread
 
 	autocmd BufEnter /var/log/shaperd/* :checktime
+	autocmd BufEnter /var/log/TBot/* :checktime
 	autocmd BufEnter /var/log/nadhled/* :checktime
 	autocmd BufEnter /var/log/scripty/* :checktime
 	autocmd BufEnter /var/log/*.log :checktime
