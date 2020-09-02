@@ -41,18 +41,30 @@ Plugin 'vim-scripts/DoxygenToolkit.vim'
 "let g:doxygen_enhanced_color=1
 "// vim:syntax=cpp.doxygen
 
-" GDB inside vim - moc sikonvy to neni, stejne jsem to moc nepouzival
-" debugovani c++ primo ve vimu vcetne vypisu promennych atd
-" https://github.com/vim-scripts/Conque-GDB
-"Plugin 'vim-scripts/Conque-GDB'
+" https://vimawesome.com/plugin/auto-ctags-vim
+" sudo apt-get install exuberant-ctags
+Plugin 'soramugi/auto-ctags.vim'
 
-" otvirani ConqueGdb napravo
-let g:ConqueGdb_SrcSplit = 'right'
-" povoli prikazy z kodu
-let g:ConqueTerm_ReadUnfocused = 1
+" Create at a Writing the file, default 0 - just for cpp files
+autocmd FileType cpp,hpp,c,h let g:auto_ctags = 1
+
+" Create the tags name, default tags
+let g:auto_ctags_tags_name = '.tags'
+
+" Create the ctags args, default --tag-relative --recurse --sort=yes
+let g:auto_ctags_tags_args = ['--tag-relative=yes', '--recurse=yes', '--sort=yes']
 
 " Vim plug for switching between companion source files (e.g. .h and .cpp)
 Plugin 'derekwyatt/vim-fswitch'
+
+" http://majutsushi.github.io/tagbar/
+Plugin 'majutsushi/tagbar'
+
+" open tagbar in vertical split next to the active window
+let g:tagbar_position = 'vertical rightbelow'
+
+nnoremap <F7> :TagbarOpen<CR>
+nnoremap <F8> :TagbarToggle<CR>
 
 " doplnovani, kontroly atd pro C++
 "Plugin 'Valloric/YouCompleteMe'

@@ -108,6 +108,7 @@ set number						" display row numbers
 set laststatus=2				" permanently display status line
 set timeoutlen=250				" Time to wait after ESC (default causes an annoying delay)
 set magic						" enable extended regular expressions
+set tags+=.tags;~		"	search for ctags up to $HOME
 
 " wrap like other editors
 "set wrap				" word wrap
