@@ -6,3 +6,5 @@ alias ca='sudo apt autoclean'
 alias sa='sudo apt search'
 export WINEPREFIX=$HOME/.wine/
 export PYTHONSTARTUP=~/.pystartup
+# disable software flow control
+stty -ixon

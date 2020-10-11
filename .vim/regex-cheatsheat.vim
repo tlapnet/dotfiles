@@ -21,3 +21,6 @@ s/\(.*peer\w\+ \){.*\(neighbor.*;\)\ *password.*$/\1from PEERS { \2 description 
 
 " IPv4
 /^(([01]?\d?\d|2[0-4]\d|25[0-5])\.){3}([01]?\d?\d|2[0-4]\d|25[0-5])\/(\d{1}|[0-2]{1}\d{1}|3[0-2])$
+
+" prevod sql prepared statementu na podminky pro vynechani 0
+:'<,'>s/\(\$\d\+\)\(,\|)\)/CASE WHEN \1 = 0 THEN NULL ELSE \1 END\2"\r^I^I^I"/gc
