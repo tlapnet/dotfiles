@@ -9,12 +9,12 @@ if version > 580
 endif
 
 set t_Co=256
-let g:colors_name = "vaclavz"
+let g:colors_name = "vaclavz_cpp"
 
 "hi CTagsMember -- no settings --
 "hi CTagsGlobalConstant -- no settings --
 "hi Ignore -- no settings --
-hi Normal guifg=#00b0d7 guibg=#000000 guisp=#000000 gui=NONE ctermfg=38 ctermbg=NONE cterm=NONE
+hi Normal guifg=#0087ff guibg=#000000 guisp=#000000 gui=NONE ctermfg=33 ctermbg=NONE cterm=NONE
 "hi CTagsImport -- no settings --
 "hi CTagsGlobalVariable -- no settings --
 "hi EnumerationValue -- no settings --

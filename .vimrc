@@ -240,7 +240,7 @@ augroup split_screen_limit
 	"autocmd FileType text setlocal textwidth=110
 	"autocmd FileType text setlocal textwidth=150
 	"autocmd FileType text setlocal textwidth=100
-	autocmd FileType cpp,hpp,c,h,md setlocal textwidth=114
+	autocmd FileType cpp,hpp,c,h,md setlocal textwidth=112
 
 	" highlight lines longer than 100 chars
 	" highlights all characters exceeding limit of 100 on each line
@@ -251,10 +251,8 @@ augroup split_screen_limit
 	"endif
 	"autocmd BufEnter cpp,hpp,c,h,md highlight OverLength ctermbg=17
 	"autocmd BufEnter cpp,hpp,c,h,md match OverLength /\%112v.*/ |
-	if &ft ==# 'cpp' |
-		autocmd BufEnter * highlight OverLength ctermbg=172
-		autocmd BufEnter * match OverLength /\%112v.*/ |
-	endif
+	autocmd FileType cpp,hpp,c,h,md highlight OverLength ctermbg=172
+	autocmd FileType cpp,hpp,c,h,md match OverLength /\%112v.*/ |
 augroup END
 
 " F3 - ulozi vsechny otevrene soubory a zavola git commit -a
@@ -273,6 +271,8 @@ augroup c_development
 	" je zadouci - zarovnani vyberu nefunguje
 	"autocmd FileType cpp,hpp,c,h set equalprg=astyle
 	autocmd filetype cpp,hpp,c,h nnoremap <F5> :%!astyle<CR>
+
+	autocmd FileType cpp,hpp,c,h colorscheme vaclavz_cpp
 
 	" F4 - compile and run current file
 	"autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%').' -g -o 
