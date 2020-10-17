@@ -249,8 +249,10 @@ augroup split_screen_limit
 	"	autocmd BufEnter * highlight OverLength ctermbg=17
 	"	autocmd BufEnter * match OverLength /\%100v.*/ |
 	"endif
-	autocmd BufEnter cpp,hpp,c,h,md highlight OverLength ctermbg=17
-	autocmd BufEnter cpp,hpp,c,h,md match OverLength /\%116v.*/ |
+	"autocmd BufEnter cpp,hpp,c,h,md highlight OverLength ctermbg=17
+	"autocmd BufEnter cpp,hpp,c,h,md match OverLength /\%112v.*/ |
+	autocmd BufEnter * highlight OverLength ctermbg=172
+	autocmd BufEnter * match OverLength /\%112v.*/ |
 augroup END
 
 " F3 - ulozi vsechny otevrene soubory a zavola git commit -a
