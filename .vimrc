@@ -230,37 +230,6 @@ set pastetoggle=<F2>
 " zavola :Dox pro vytvoreni doxygen sablony
 nnoremap <c-c> :Dox<CR>
 
-" omezeni sirky a barevne zvyrazneni pri jejim prekroceni - vertical split
-" screen na fullhd
-augroup split_screen_limit
-	" For all text files set 'textwidth' to 150 characters.
-	" 110 was not enough for hires screen
-	" but 100 is enough to fit two files is vertical
-	" split mode on FullHD - pri fontu 12 se vejde 113
-	"autocmd FileType text setlocal textwidth=110
-	"autocmd FileType text setlocal textwidth=150
-	"autocmd FileType text setlocal textwidth=100
-	autocmd FileType cpp,hpp,c,h,md setlocal textwidth=112
-
-	" highlight lines longer than 100 chars
-	" highlights all characters exceeding limit of 100 on each line
-	" fits two files in split mode on full HD screen up to 10000 lines
-	"if &ft ==# 'cpp' |
-	"	autocmd BufEnter * highlight OverLength ctermbg=17
-	"	autocmd BufEnter * match OverLength /\%100v.*/ |
-	"endif
-	"autocmd BufEnter cpp,hpp,c,h,md highlight OverLength ctermbg=17
-	"autocmd BufEnter cpp,hpp,c,h,md match OverLength /\%112v.*/ |
-	autocmd FileType cpp,hpp,c,h,md highlight OverLength ctermbg=172
-	autocmd FileType cpp,hpp,c,h,md match OverLength /\%112v.*/ |
-augroup END
-
-" F3 - ulozi vsechny otevrene soubory a zavola git commit -a
-"nnoremap <F3> :w <bar> exec '!git commit '.shellescape('%')<CR>
-"predelano na git commit -a, at nemusim vocasit zpravy ke commitum dokola
-"nnoremap <F3> :wa <bar> exec '!git commit -a'<CR>
-nnoremap <F3> :wa <bar> exec '!git commit -a && git push'<CR>
-
 " c & c++ build and run shortcuts
 augroup c_development
 	" slouzi k zavolani cppman na konkretnim slove, luxusni c++ manual :-)
@@ -302,3 +271,35 @@ augroup c_development
 	"autocmd filetype cpp nnoremap <F5> :wa <bar> exec '!make clean && make -j' <bar>
 	"			\ :ConqueGdbVSplit build/program<CR>
 augroup END
+
+" omezeni sirky a barevne zvyrazneni pri jejim prekroceni - vertical split
+" screen na fullhd
+augroup split_screen_limit
+	" For all text files set 'textwidth' to 150 characters.
+	" 110 was not enough for hires screen
+	" but 100 is enough to fit two files is vertical
+	" split mode on FullHD - pri fontu 12 se vejde 113
+	"autocmd FileType text setlocal textwidth=110
+	"autocmd FileType text setlocal textwidth=150
+	"autocmd FileType text setlocal textwidth=100
+	autocmd FileType cpp,hpp,c,h,md setlocal textwidth=112
+
+	" highlight lines longer than 100 chars
+	" highlights all characters exceeding limit of 100 on each line
+	" fits two files in split mode on full HD screen up to 10000 lines
+	"if &ft ==# 'cpp' |
+	"	autocmd BufEnter * highlight OverLength ctermbg=17
+	"	autocmd BufEnter * match OverLength /\%100v.*/ |
+	"endif
+	"autocmd BufEnter cpp,hpp,c,h,md highlight OverLength ctermbg=17
+	"autocmd BufEnter cpp,hpp,c,h,md match OverLength /\%112v.*/ |
+	" Pozor, nesmi se za timto uz menit nic kolem barev, ani schematu
+	autocmd FileType cpp,hpp,c,h,md highlight OverLength ctermbg=172
+	autocmd FileType cpp,hpp,c,h,md match OverLength /\%112v.*/ |
+augroup END
+
+" F3 - ulozi vsechny otevrene soubory a zavola git commit -a
+"nnoremap <F3> :w <bar> exec '!git commit '.shellescape('%')<CR>
+"predelano na git commit -a, at nemusim vocasit zpravy ke commitum dokola
+"nnoremap <F3> :wa <bar> exec '!git commit -a'<CR>
+nnoremap <F3> :wa <bar> exec '!git commit -a && git push'<CR>
