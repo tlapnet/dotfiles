@@ -72,8 +72,12 @@ syn match   messagesDebug       contained '\c.*(\<\(Debug\)\>).*'
 syn match   messagesText        contained display '.*'
                                 \ contains=messagesNumber,messagesURL,messagesAsync,messagesCommand
 
-" zelene zvyrazneni radku obsahujiciho slovo uspesne
-syn match   messageSuccess		contained display 'Uspesne.*'
+" zelene zvyrazneni radku obsahujiciho slovo Uspesne
+syn match   messageSuccess		contained display '\<\(Uspesne\|Uspesna\)\>.*'
+								\ contains=messagesNumber
+
+" cervene zvyrazneni radku obsahujiciho slovo Problem
+syn match   messagesError		contained display 'Problem.*'
 								\ contains=messagesNumber
 
 " log_function_ASYNC - oznacuje funkci s asynchronnim volanim
