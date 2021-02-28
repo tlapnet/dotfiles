@@ -211,17 +211,19 @@ augroup logs
 
 	autocmd BufEnter,BufReadPre /var/log/scripty/* set filetype=messages
 
-	autocmd BufEnter /var/log/shaperd/* set autoread
-	autocmd BufEnter /var/log/TBot/* set autoread
-	autocmd BufEnter /var/log/nadhled/* set autoread
-	autocmd BufEnter /var/log/scripty/* set autoread
-	autocmd BufEnter /var/log/*.log set autoread
+	" zruseno automaticke reloadovani souboru, spis to obtezuje, nez aby to
+	" pomahalo
+	"autocmd BufEnter /var/log/shaperd/* set autoread
+	"autocmd BufEnter /var/log/TBot/* set autoread
+	"autocmd BufEnter /var/log/nadhled/* set autoread
+	"autocmd BufEnter /var/log/scripty/* set autoread
+	"autocmd BufEnter /var/log/*.log set autoread
 
-	autocmd BufEnter /var/log/shaperd/* :checktime
-	autocmd BufEnter /var/log/TBot/* :checktime
-	autocmd BufEnter /var/log/nadhled/* :checktime
-	autocmd BufEnter /var/log/scripty/* :checktime
-	autocmd BufEnter /var/log/*.log :checktime
+	"autocmd BufEnter /var/log/shaperd/* :checktime
+	"autocmd BufEnter /var/log/TBot/* :checktime
+	"autocmd BufEnter /var/log/nadhled/* :checktime
+	"autocmd BufEnter /var/log/scripty/* :checktime
+	"autocmd BufEnter /var/log/*.log :checktime
 augroup END
 
 " F2 - vypne automaticke odsazovani a tabulatorovani pri vkladani textu
