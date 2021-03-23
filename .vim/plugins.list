@@ -54,6 +54,8 @@ let g:auto_ctags_tags_name = '.tags'
 " Create the ctags args, default --tag-relative --recurse --sort=yes
 let g:auto_ctags_tags_args = ['--tag-relative=yes', '--recurse=yes', '--sort=yes']
 
+let g:auto_ctags_set_tags_option = 1
+
 " Vim plug for switching between companion source files (e.g. .h and .cpp)
 Plugin 'derekwyatt/vim-fswitch'
 
