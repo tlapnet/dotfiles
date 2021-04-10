@@ -1,167 +1,110 @@
 pane	0	1	:zsh	1	:*	1	:/home/vaclavz	1	zsh	:
-pane	Programming	1	:Programming	0	:	1	:/home/vaclavz	1	zsh	:
-pane	Programming	2	:cpp	0	:	1	:/home/vaclavz	1	zsh	:
-pane	Programming	2	:cpp	0	:	2	:/home/vaclavz	0	zsh	:
-pane	Programming	3	:cgi	1	:*	1	:/mnt/ssd/Sync/Programming/cpp/cgicc-3.2.19/demo	1	zsh	:
-pane	Programming	4	:wt	0	:	1	:/home/vaclavz	1	zsh	:
-pane	Programming	5	:build	0	:	1	:/home/vaclavz	0	zsh	:
-pane	Programming	5	:build	0	:	2	:/home/vaclavz	1	zsh	:
-pane	Programming	6	:cgicc	0	:-	1	:/home/vaclavz	1	zsh	:
-pane	lib	1	:vim	1	:*	1	:/home/vaclavz/shaperd/projects/lib	1	zsh	:
-pane	lib	2	:lib	0	:	1	:/home/vaclavz	1	zsh	:
-pane	lib	3	:include	0	:	1	:/home/vaclavz/shaperd/projects/include	1	zsh	:
-pane	lib	4	:log	0	:	1	:/var/log/shaperd	1	zsh	:
-pane	lib	5	:man	0	:-	1	:/home/vaclavz/shaperd/projects/lib	1	zsh	:
-pane	lib	6	:zsh	0	:	1	:/home/vaclavz	1	zsh	:
-pane	lib	7	:postgresql	0	:	1	:/home/vaclavz/shaperd/sql	1	zsh	:
-pane	lib	8	:shaperd	0	:	1	:/home/vaclavz/shaperd/sql	1	zsh	:
-pane	lib	9	:rsync	0	:	1	:/var/spool/shaperd/rsync	1	zsh	:
-pane	local	1	:zsh	1	:*	1	:/home/vaclavz	1	zsh	:
-pane	local	2	:Downloads	0	:-	1	:/home/vaclavz/Downloads	1	zsh	:
-pane	mikrotiky	1	:ssh	0	:-	1	:/home/vaclavz	1	zsh	:
-pane	mikrotiky	1	:ssh	0	:-	2	:/home/vaclavz	0	zsh	:
-pane	mikrotiky	2	:scripty	1	:*	1	:/home/vaclavz	1	zsh	:
-pane	mikrotiky	3	:vim	0	:	1	:/home/vaclavz	1	zsh	:
-pane	mikrotiky	4	:Downloads	0	:	1	:/home/vaclavz/Downloads	1	zsh	:
-pane	shaperd	1	:shaperd	0	:	1	:/home/vaclavz/shaperd	1	zsh	:
-pane	shaperd	2	:etc	1	:*	1	:/home/vaclavz/shaperd/etc	1	zsh	:
-pane	shaperd	3	:src	0	:	1	:/home/vaclavz/shaperd/src/common	0	zsh	:
-pane	shaperd	3	:src	0	:	2	:/home/vaclavz/shaperd/src/kernel/4.9.110-fq-codel	1	zsh	:
-pane	shaperd	4	:build	0	:	1	:/home/vaclavz/shaperd/build	1	zsh	:
-pane	shaperd	5	:extras	0	:-	1	:/home/vaclavz	1	zsh	:
-pane	shaperd	6	:sbin	0	:	1	:/home/vaclavz/shaperd/sbin	1	zsh	:
-pane	shaperd	7	:sql	0	:	1	:/home/vaclavz/shaperd/sql	1	zsh	:
-pane	shaperd	8	:scripts	0	:	1	:/home/vaclavz/shaperd/extras/shaperd-scripts	1	zsh	:
-pane	shaperd	9	:projects	0	:	1	:/home/vaclavz/shaperd/projects	1	zsh	:
-pane	shd-admslave	1	:vim	1	:*	1	:/home/vaclavz/shaperd/projects/shd-admslave	1	zsh	:
-pane	shd-admslave	2	:build	0	:	1	:/home/vaclavz/shaperd/projects/shd-admslave	1	zsh	:
-pane	shd-admslave	3	:root	0	:	1	:/home/vaclavz/shaperd/projects/shd-admslave	1	zsh	:
-pane	shd-admslave	4	:log	0	:	1	:/var/log/shaperd	1	zsh	:
-pane	shd-admslave	5	:man	0	:	1	:/usr/share/man	1	zsh	:
-pane	shd-admslave	6	:zsh	0	:	1	:/var/spool/shaperd/dump	1	zsh	:
-pane	shd-admslave	7	:postgres	0	:-	1	:/home/vaclavz/shaperd/sql	1	zsh	:
-pane	shd-admslave	8	:scripts	0	:	1	:/home/vaclavz	1	zsh	:
-pane	shd-admslave	9	:rsync	0	:	1	:/var/spool/shaperd/rsync	1	zsh	:
-pane	shd-admslave	10	:zsh	0	:	1	:/var/spool/shaperd/rsync	1	zsh	:
-pane	shd-monitord	1	:vim	1	:*	1	:/home/vaclavz/shaperd/projects/shd-monitord	1	zsh	:
-pane	shd-monitord	2	:build	0	:-	1	:/home/vaclavz/shaperd/projects/shd-monitord	1	zsh	:
-pane	shd-monitord	3	:root	0	:	1	:/home/vaclavz/shaperd/projects/shd-monitord	1	zsh	:
-pane	shd-monitord	4	:log	0	:	1	:/var/log/shaperd	1	zsh	:
-pane	shd-monitord	5	:man	0	:	1	:/usr/share/man	1	zsh	:
-pane	shd-monitord	6	:dump	0	:	1	:/var/spool/shaperd/dump	1	zsh	:
-pane	shd-monitord	7	:postgres	0	:	1	:/home/vaclavz/shaperd/sql	1	zsh	:
-pane	shd-monitord	8	:scripts	0	:	1	:/var/spool/shaperd/rsync	1	zsh	:
-pane	shd-netcheck	1	:vim	1	:*	1	:/home/vaclavz/shaperd/projects/shd-netcheck	1	zsh	:
-pane	shd-netcheck	2	:build	0	:	1	:/home/vaclavz/shaperd/projects/shd-netcheck	1	zsh	:
-pane	shd-netcheck	3	:root	0	:	1	:/home/vaclavz/shaperd/projects/shd-netcheck	1	zsh	:
-pane	shd-netcheck	4	:log	0	:	1	:/var/log/shaperd	1	zsh	:
-pane	shd-netcheck	5	:man	0	:-	1	:/usr/share/man	1	zsh	:
-pane	shd-netcheck	6	:dump	0	:	1	:/var/spool/shaperd/dump	1	zsh	:
-pane	shd-netcheck	7	:postgres	0	:	1	:/home/vaclavz/shaperd/sql	1	zsh	:
-pane	shd-netcheck	8	:scripts	0	:	1	:/home/vaclavz	1	zsh	:
-pane	shd-qosd	1	:vim	1	:*	1	:/home/vaclavz/shaperd/projects/shd-qosd	1	zsh	:
-pane	shd-qosd	2	:build	0	:-	1	:/home/vaclavz/shaperd/projects/shd-qosd	1	zsh	:
-pane	shd-qosd	3	:root	0	:	1	:/home/vaclavz/shaperd/projects/shd-qosd	1	zsh	:
-pane	shd-qosd	4	:log	0	:	1	:/var/log/shaperd	1	zsh	:
-pane	shd-qosd	5	:man	0	:	1	:/home/vaclavz/shaperd/projects/shd-qosd	1	zsh	:
-pane	shd-qosd	6	:dump	0	:	1	:/var/spool/shaperd/dump	1	zsh	:
-pane	shd-qosd	7	:postgres	0	:	1	:/home/vaclavz/shaperd/sql	1	zsh	:
-pane	shd-tcd	1	:vim	1	:*	1	:/home/vaclavz/shaperd/projects/shd-tcd	1	zsh	:
-pane	shd-tcd	2	:build	0	:	1	:/home/vaclavz/shaperd/projects/shd-tcd	1	zsh	:
-pane	shd-tcd	3	:root	0	:	1	:/home/vaclavz/shaperd/projects/shd-tcd	1	zsh	:
-pane	shd-tcd	4	:log	0	:	1	:/var/log/shaperd	1	zsh	:
-pane	shd-tcd	5	:man	0	:	1	:/usr/share/man	0	zsh	:
-pane	shd-tcd	5	:man	0	:	2	:/usr/share/man	1	zsh	:
-pane	shd-tcd	6	:dump	0	:	1	:/var/spool/shaperd/dump	1	zsh	:
-pane	shd-tcd	7	:postgres	0	:	1	:/home/vaclavz/shaperd/projects/shd-tcd	1	zsh	:
-pane	shd-tcd	8	:scripty	0	:-	1	:/home/vaclavz/shaperd/projects/shd-tcd/scripty	1	zsh	:
-pane	shd-webview	1	:vim	1	:*	1	:/home/vaclavz/shaperd/projects/shd-webview	1	zsh	:
-pane	shd-webview	2	:build	0	:	1	:/home/vaclavz/shaperd/projects/shd-webview	1	zsh	:
-pane	shd-webview	2	:build	0	:	2	:/home/vaclavz/shaperd/projects/shd-webview/src	0	zsh	:
-pane	shd-webview	3	:root	0	:	1	:/home/vaclavz/shaperd/projects/shd-webview	1	zsh	:
-pane	shd-webview	4	:log	0	:	1	:/var/log/shaperd	1	zsh	:
-pane	shd-webview	5	:man	0	:-	1	:/usr/share/man	1	zsh	:
-pane	shd-webview	6	:dump	0	:	1	:/var/spool/shaperd/dump	1	zsh	:
-pane	shd-webview	7	:postgres	0	:	1	:/home/vaclavz/shaperd/sql	1	zsh	:
-pane	shd-webview	8	:static	0	:	1	:/home/vaclavz/shaperd/projects/shd-webview	1	zsh	:
-window	0	1	1	:*	d3de,239x68,0,0,1
-window	Programming	1	0	:	d3df,239x68,0,0,2
-window	Programming	2	0	:	234d,239x68,0,0{119x68,0,0,3,119x68,120,0,4}
-window	Programming	3	1	:*	d3e2,239x68,0,0,5
-window	Programming	4	0	:	d3e3,239x68,0,0,6
-window	Programming	5	0	:	2353,239x68,0,0{119x68,0,0,7,119x68,120,0,8}
-window	Programming	6	0	:-	d3e6,239x68,0,0,9
-window	lib	1	1	:*	6a1f,239x68,0,0,10
-window	lib	2	0	:	6a20,239x68,0,0,11
-window	lib	3	0	:	6a21,239x68,0,0,12
-window	lib	4	0	:	6a22,239x68,0,0,13
-window	lib	5	0	:-	6a23,239x68,0,0,14
-window	lib	6	0	:	6a24,239x68,0,0,15
-window	lib	7	0	:	6a25,239x68,0,0,16
-window	lib	8	0	:	6a26,239x68,0,0,17
-window	lib	9	0	:	6a27,239x68,0,0,18
-window	local	1	1	:*	6a28,239x68,0,0,19
-window	local	2	0	:-	ea1f,239x68,0,0,20
-window	mikrotiky	1	0	:-	fe9a,239x68,0,0{119x68,0,0,21,119x68,120,0,22}
-window	mikrotiky	2	1	:*	ea22,239x68,0,0,23
-window	mikrotiky	3	0	:	ea23,239x68,0,0,24
-window	mikrotiky	4	0	:	ea24,239x68,0,0,25
-window	shaperd	1	0	:	ea25,239x68,0,0,26
-window	shaperd	2	1	:*	ea26,239x68,0,0,27
-window	shaperd	3	0	:	fea1,239x68,0,0{119x68,0,0,28,119x68,120,0,29}
-window	shaperd	4	0	:	6a20,239x68,0,0,30
-window	shaperd	5	0	:-	6a21,239x68,0,0,31
-window	shaperd	6	0	:	6a22,239x68,0,0,32
-window	shaperd	7	0	:	6a23,239x68,0,0,33
-window	shaperd	8	0	:	6a24,239x68,0,0,34
-window	shaperd	9	0	:	6a25,239x68,0,0,35
-window	shd-admslave	1	1	:*	6a26,239x68,0,0,36
-window	shd-admslave	2	0	:	6a27,239x68,0,0,37
-window	shd-admslave	3	0	:	6a28,239x68,0,0,38
-window	shd-admslave	4	0	:	6a29,239x68,0,0,39
-window	shd-admslave	5	0	:	ea20,239x68,0,0,40
-window	shd-admslave	6	0	:	ea21,239x68,0,0,41
-window	shd-admslave	7	0	:-	ea22,239x68,0,0,42
-window	shd-admslave	8	0	:	ea23,239x68,0,0,43
-window	shd-admslave	9	0	:	ea24,239x68,0,0,44
-window	shd-admslave	10	0	:	ea25,239x68,0,0,45
-window	shd-monitord	1	1	:*	ea26,239x68,0,0,46
-window	shd-monitord	2	0	:-	ea27,239x68,0,0,47
-window	shd-monitord	3	0	:	ea28,239x68,0,0,48
-window	shd-monitord	4	0	:	ea29,239x68,0,0,49
-window	shd-monitord	5	0	:	6a21,239x68,0,0,50
-window	shd-monitord	6	0	:	6a22,239x68,0,0,51
-window	shd-monitord	7	0	:	6a23,239x68,0,0,52
-window	shd-monitord	8	0	:	6a24,239x68,0,0,53
-window	shd-netcheck	1	1	:*	6a25,239x68,0,0,54
-window	shd-netcheck	2	0	:	6a26,239x68,0,0,55
-window	shd-netcheck	3	0	:	6a27,239x68,0,0,56
-window	shd-netcheck	4	0	:	6a28,239x68,0,0,57
-window	shd-netcheck	5	0	:-	6a29,239x68,0,0,58
-window	shd-netcheck	6	0	:	6a2a,239x68,0,0,59
-window	shd-netcheck	7	0	:	ea21,239x68,0,0,60
-window	shd-netcheck	8	0	:	ea22,239x68,0,0,61
-window	shd-qosd	1	1	:*	ea23,239x68,0,0,62
-window	shd-qosd	2	0	:-	ea24,239x68,0,0,63
-window	shd-qosd	3	0	:	ea25,239x68,0,0,64
-window	shd-qosd	4	0	:	ea26,239x68,0,0,65
-window	shd-qosd	5	0	:	ea27,239x68,0,0,66
-window	shd-qosd	6	0	:	ea28,239x68,0,0,67
-window	shd-qosd	7	0	:	ea29,239x68,0,0,68
-window	shd-tcd	1	1	:*	ea2a,239x68,0,0,69
-window	shd-tcd	2	0	:	6a22,239x68,0,0,70
-window	shd-tcd	3	0	:	6a23,239x68,0,0,71
-window	shd-tcd	4	0	:	6a24,239x68,0,0,72
-window	shd-tcd	5	0	:	7e9f,239x68,0,0{119x68,0,0,73,119x68,120,0,74}
-window	shd-tcd	6	0	:	6a27,239x68,0,0,75
-window	shd-tcd	7	0	:	6a28,239x68,0,0,76
-window	shd-tcd	8	0	:-	6a29,239x68,0,0,77
-window	shd-webview	1	1	:*	6a2a,239x68,0,0,78
-window	shd-webview	2	0	:	bea0,239x68,0,0{119x68,0,0,79,119x68,120,0,80}
-window	shd-webview	3	0	:	ea23,239x68,0,0,81
-window	shd-webview	4	0	:	ea24,239x68,0,0,82
-window	shd-webview	5	0	:-	ea25,239x68,0,0,83
-window	shd-webview	6	0	:	ea26,239x68,0,0,84
-window	shd-webview	7	0	:	ea27,239x68,0,0,85
-window	shd-webview	8	0	:	ea28,239x68,0,0,86
-state	local	shd-webview
+pane	F_shaperd	1	:shaperd	0	:	1	:/home/vaclavz/Tlapnet/final-shaperd	1	zsh	:
+pane	F_shaperd	2	:etc	0	:	1	:/home/vaclavz/Tlapnet/final-shaperd/extras/shaper-konfigurace/etc	1	zsh	:
+pane	F_shaperd	3	:kernel	0	:	1	:/home/vaclavz/Tlapnet/final-shaperd/extras/shaper-konfigurace/kernel	1	zsh	:
+pane	F_shaperd	4	:src	0	:	1	:/home/vaclavz/Tlapnet/final-shaperd/src	1	zsh	:
+pane	F_shaperd	5	:extras	0	:	1	:/home/vaclavz/Tlapnet/final-shaperd/extras	1	zsh	:
+pane	F_shaperd	6	:sbin	0	:	1	:/home/vaclavz/Tlapnet/final-shaperd/extras/shaper-konfigurace/sbin	1	zsh	:
+pane	F_shaperd	7	:scripts	0	:-	1	:/home/vaclavz/Tlapnet/final-shaperd/extras/shaper-konfigurace	1	zsh	:
+pane	F_shaperd	8	:sql	1	:*	1	:/home/vaclavz/Tlapnet/final-shaperd/sql	1	zsh	:
+pane	F_shd-	1	:libShaperd	1	:*	1	:/home/vaclavz/Tlapnet/libShaperd	1	zsh	:
+pane	F_shd-	2	:admslave	0	:-	1	:/home/vaclavz/Tlapnet/final-shaperd/projects/shd-admslave	1	zsh	:
+pane	F_shd-	3	:monitord	0	:	1	:/home/vaclavz/Tlapnet/final-shaperd/projects/shd-monitord	1	zsh	:
+pane	F_shd-	4	:netcheck	0	:	1	:/home/vaclavz/Tlapnet/final-shaperd/projects/shd-netcheck	1	zsh	:
+pane	F_shd-	5	:qosd	0	:	1	:/home/vaclavz/Tlapnet/final-shaperd/projects/shd-qosd	1	zsh	:
+pane	F_shd-	6	:tcd	0	:	1	:/home/vaclavz/Tlapnet/final-shaperd/projects/shd-tcd	1	zsh	:
+pane	F_shd-	7	:webview	0	:	1	:/home/vaclavz/Tlapnet/final-shaperd/projects/shd-webview	1	zsh	:
+pane	F_shd-	8	:sql	0	:	1	:/home/vaclavz/Tlapnet/final-shaperd/sql	1	zsh	:
+pane	TBot	1	:TBot-src	1	:*	1	:/home/vaclavz/Development/TBot	1	zsh	:
+pane	TBot	2	:libTBotBase	0	:	1	:/home/vaclavz/Development/TBot/lib	1	zsh	:
+pane	TBot	3	:gdb	0	:	1	:/home/vaclavz/Development/TBot/build	1	zsh	:
+pane	TBot	4	:log	0	:	1	:/var/log/TBot	1	zsh	:
+pane	TBot	5	:etc	0	:	1	:/home/vaclavz/Development/TBot/etc	1	zsh	:
+pane	TBot	6	:sbin	0	:	1	:/home/vaclavz/Development/TBot/sbin	1	zsh	:
+pane	TBot	7	:sql	0	:	1	:/home/vaclavz/Development/TBot/sql	1	zsh	:
+pane	TBot	8	:cpprest	0	:	1	:/home/vaclavz/Downloads/cpprestsdk/build.debug	1	zsh	:
+pane	TBot	8	:cpprest	0	:	2	:/home/vaclavz/Downloads/cpprestsdk/Release/include/cpprest/details	0	zsh	:
+pane	TBot	9	:extras	0	:-	1	:/home/vaclavz/Development/TBot/extras	1	zsh	:
+pane	Tlapnet	1	:nadhled	1	:*	1	:/home/vaclavz/Tlapnet/nadhled	1	zsh	:
+pane	Tlapnet	2	:nadhled-frontend	0	:	1	:/home/vaclavz/Tlapnet/nadhled/frontend	1	zsh	:
+pane	Tlapnet	3	:cetin-radius	0	:	1	:/home/vaclavz/Tlapnet/freeradius-cetin	1	zsh	:
+pane	Tlapnet	4	:tlapnet-radius	0	:	1	:/home/vaclavz/Tlapnet/freeradius-mysql	1	zsh	:
+pane	Tlapnet	4	:tlapnet-radius	0	:	2	:/home/vaclavz/Tlapnet/freeradius-mysql-vlasimnet	0	zsh	:
+pane	Tlapnet	5	:zabbix	0	:Z	1	:/home/vaclavz/Tlapnet/zabbix-monitoring	0	zsh	:
+pane	Tlapnet	5	:zabbix	0	:Z	2	:/home/vaclavz/Tlapnet/zabbix-partitioning	1	zsh	:
+pane	Tlapnet	6	:tlapnet-farm	0	:	1	:/home/vaclavz/Tlapnet/tlapnet-farm	1	zsh	:
+pane	Tlapnet	7	:dotfiles	0	:	1	:/home/vaclavz/Programming/dotfiles	1	zsh	:
+pane	Tlapnet	8	:dokumentace	0	:	1	:/home/vaclavz/Tlapnet/dokumentace	1	zsh	:
+pane	Tlapnet	9	:bash-scripts	0	:-	1	:/home/vaclavz/Programming/bash-scripts	1	zsh	:
+pane	shaperd	1	:shaperd	1	:*	1	:/home/vaclavz/Tlapnet/shaperd	1	zsh	:
+pane	shaperd	2	:etc	0	:	1	:/home/vaclavz/Tlapnet/shaperd/extras/shaper-konfigurace/etc	1	zsh	:
+pane	shaperd	3	:kernel	0	:	1	:/home/vaclavz/Tlapnet/shaperd/extras/shaper-konfigurace/kernel	1	zsh	:
+pane	shaperd	4	:src	0	:	1	:/home/vaclavz/Tlapnet/shaperd/src	1	zsh	:
+pane	shaperd	5	:extras	0	:	1	:/home/vaclavz/Tlapnet/shaperd/extras	1	zsh	:
+pane	shaperd	6	:sbin	0	:	1	:/home/vaclavz/Tlapnet/shaperd/extras/shaper-konfigurace/sbin	1	zsh	:
+pane	shaperd	7	:scripts	0	:	1	:/home/vaclavz/Tlapnet/shaperd/extras/shaper-konfigurace	1	zsh	:
+pane	shaperd	8	:sql	0	:	1	:/home/vaclavz/Tlapnet/shaperd/sql	1	zsh	:
+pane	shaperd	9	:dokumentace	0	:-	1	:/home/vaclavz/Tlapnet/shaperd-dokumentace	1	zsh	:
+pane	shd-	1	:libShaperd	0	:	1	:/home/vaclavz/Tlapnet/libShaperd	1	zsh	:
+pane	shd-	2	:admslave	0	:	1	:/home/vaclavz/Tlapnet/shaperd/projects/shd-admslave	1	zsh	:
+pane	shd-	3	:monitord	0	:	1	:/home/vaclavz/Tlapnet/shaperd/projects/shd-monitord	1	zsh	:
+pane	shd-	4	:netcheck	0	:	1	:/home/vaclavz/Tlapnet/shaperd/projects/shd-netcheck	1	zsh	:
+pane	shd-	5	:qosd	0	:	1	:/home/vaclavz/Tlapnet/shaperd/projects/shd-qosd	1	zsh	:
+pane	shd-	6	:tcd	0	:	1	:/home/vaclavz/Tlapnet/shaperd/projects/shd-tcd	1	zsh	:
+pane	shd-	7	:webview	0	:	1	:/home/vaclavz/Tlapnet/shaperd/projects/shd-webview	1	zsh	:
+pane	shd-	8	:webview-static	0	:-	1	:/home/vaclavz/Tlapnet/shaperd/projects/shd-webview/webview-static	1	zsh	:
+pane	shd-	9	:sql	1	:*	1	:/home/vaclavz/Tlapnet/shaperd/sql	1	zsh	:
+window	0	1	1	:*	b3de,239x60,0,0,1
+window	F_shaperd	1	0	:	b3df,239x60,0,0,2
+window	F_shaperd	2	0	:	b3e0,239x60,0,0,3
+window	F_shaperd	3	0	:	b3e1,239x60,0,0,4
+window	F_shaperd	4	0	:	b3e2,239x60,0,0,5
+window	F_shaperd	5	0	:	b3e3,239x60,0,0,6
+window	F_shaperd	6	0	:	b3e4,239x60,0,0,7
+window	F_shaperd	7	0	:-	b3e5,239x60,0,0,8
+window	F_shaperd	8	1	:*	b3e6,239x60,0,0,9
+window	F_shd-	1	1	:*	5a20,239x60,0,0,11
+window	F_shd-	2	0	:-	5a21,239x60,0,0,12
+window	F_shd-	3	0	:	5a22,239x60,0,0,13
+window	F_shd-	4	0	:	5a23,239x60,0,0,14
+window	F_shd-	5	0	:	5a24,239x60,0,0,15
+window	F_shd-	6	0	:	5a25,239x60,0,0,16
+window	F_shd-	7	0	:	5a26,239x60,0,0,17
+window	F_shd-	8	0	:	5a27,239x60,0,0,18
+window	TBot	1	1	:*	da23,239x60,0,0,24
+window	TBot	2	0	:	da24,239x60,0,0,25
+window	TBot	3	0	:	da25,239x60,0,0,26
+window	TBot	4	0	:	da26,239x60,0,0,27
+window	TBot	5	0	:	da27,239x60,0,0,28
+window	TBot	6	0	:	da28,239x60,0,0,29
+window	TBot	7	0	:	5a20,239x60,0,0,30
+window	TBot	8	0	:	749a,239x60,0,0{119x60,0,0,31,119x60,120,0,32}
+window	TBot	9	0	:-	5a23,239x60,0,0,33
+window	Tlapnet	1	1	:*	5a25,239x60,0,0,35
+window	Tlapnet	2	0	:	5a26,239x60,0,0,36
+window	Tlapnet	3	0	:	5a27,239x60,0,0,37
+window	Tlapnet	4	0	:	349f,239x60,0,0{119x60,0,0,38,119x60,120,0,63}
+window	Tlapnet	5	0	:Z	349f,239x60,0,0{119x60,0,0,39,119x60,120,0,62}
+window	Tlapnet	6	0	:	da20,239x60,0,0,40
+window	Tlapnet	7	0	:	da21,239x60,0,0,41
+window	Tlapnet	8	0	:	da22,239x60,0,0,42
+window	Tlapnet	9	0	:-	da23,239x60,0,0,43
+window	shaperd	1	1	:*	da24,239x60,0,0,44
+window	shaperd	2	0	:	da25,239x60,0,0,45
+window	shaperd	3	0	:	da26,239x60,0,0,46
+window	shaperd	4	0	:	da27,239x60,0,0,47
+window	shaperd	5	0	:	da28,239x60,0,0,48
+window	shaperd	6	0	:	da29,239x60,0,0,49
+window	shaperd	7	0	:	5a21,239x60,0,0,50
+window	shaperd	8	0	:	5a22,239x60,0,0,51
+window	shaperd	9	0	:-	5a23,239x60,0,0,52
+window	shd-	1	0	:	5a24,239x60,0,0,53
+window	shd-	2	0	:	5a25,239x60,0,0,54
+window	shd-	3	0	:	5a26,239x60,0,0,55
+window	shd-	4	0	:	5a27,239x60,0,0,56
+window	shd-	5	0	:	5a28,239x60,0,0,57
+window	shd-	6	0	:	5a29,239x60,0,0,58
+window	shd-	7	0	:	5a2a,239x60,0,0,59
+window	shd-	8	0	:-	da21,239x60,0,0,60
+window	shd-	9	1	:*	da22,239x60,0,0,61
+state	Tlapnet	shd-
