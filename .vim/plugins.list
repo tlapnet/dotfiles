@@ -43,6 +43,7 @@ let g:flake8_show_in_file=1
 Plugin 'tell-k/vim-autopep8'
 
 autocmd FileType python noremap <buffer> <F5> :call Autopep8()<CR>
+let g:autopep8_max_line_length=112
 
 " doxygen - pro generovani dokumentace z kodu
 Plugin 'vim-scripts/DoxygenToolkit.vim'
