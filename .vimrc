@@ -232,6 +232,11 @@ set pastetoggle=<F2>
 " zavola :Dox pro vytvoreni doxygen sablony
 nnoremap <c-c> :Dox<CR>
 
+augroup python_develop
+	" build
+	autocmd filetype py nnoremap <F4> :wa <bar> exec '!python3 -m py_compile '.shellescape('%').<CR>
+augroup END
+
 " c & c++ build and run shortcuts
 augroup c_development
 	" slouzi k zavolani cppman na konkretnim slove, luxusni c++ manual :-)

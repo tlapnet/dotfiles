@@ -34,6 +34,16 @@ Plugin 'mattn/emmet-vim'
 "	autocmd BufRead */shaperd/* DBSetOption profile=shaperd
 "augroup end
 
+" syntax checker for python
+Plugin 'nvie/vim-flake8'
+
+let g:flake8_show_in_file=1
+
+" automaticky fomrater pro python - F5
+Plugin 'tell-k/vim-autopep8'
+
+autocmd FileType python noremap <buffer> <F5> :call Autopep8()<CR>
+
 " doxygen - pro generovani dokumentace z kodu
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 
@@ -76,3 +86,5 @@ Plugin 'ycm-core/YouCompleteMe'
 let g:ycm_always_populate_location_list = 1
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
+
+" vim: filetype=vim
