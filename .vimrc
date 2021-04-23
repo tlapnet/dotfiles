@@ -233,8 +233,7 @@ set pastetoggle=<F2>
 nnoremap <c-c> :Dox<CR>
 
 augroup python_develop
-	" build
-	autocmd filetype py nnoremap <F4> :wa <bar> exec '!python3 -m py_compile '.shellescape('%').<CR>
+	autocmd BufNewFile *.py 0r ~/.vim/templates/skeleton.py
 augroup END
 
 " c & c++ build and run shortcuts
