@@ -8,6 +8,7 @@ VERSION = str(VERSION_MAJOR) + "." + str(VERSION_MINOR) + "." + str(VERSION_PATC
 # seznam
 # _Version
 # _Info
+# _main
 
 
 # _Version
@@ -27,7 +28,14 @@ Informace:
 # _Info
 
 
+# _main
+def main():
+    print("main")
+# _main
+
+
 # name_guard
 if __name__ == "__main__":
-    print("main")
+    main()
 # name_guard
+
