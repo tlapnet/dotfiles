@@ -228,6 +228,7 @@ augroup END
 
 " F2 - vypne automaticke odsazovani a tabulatorovani pri vkladani textu
 set pastetoggle=<F2>
+autocmd filetype * nnoremap <F6> :belowright terminal<CR>
 
 " zavola :Dox pro vytvoreni doxygen sablony
 nnoremap <c-c> :Dox<CR>
