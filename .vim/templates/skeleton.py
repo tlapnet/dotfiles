@@ -13,12 +13,18 @@ VERSION = str(VERSION_MAJOR) + "." + str(VERSION_MINOR) + "." + str(VERSION_PATC
 
 # _Version
 def Version():
+    """
+    Vypis verze prislusneho scriptu
+    """
     print("\033[92mversion: " + VERSION + "\033[5m\n")
 # _Version
 
 
 # _Info
 def Info():
+    """
+    Vypis napovedy k pouziti scriptu, funkcnosti atd.
+    """
     # vypis verze
     Version()
 
@@ -30,6 +36,9 @@ Informace:
 
 # _main
 def main():
+    """
+    Zakladni funkce, volana pri primem spusteni scriptu.
+    """
     print("main")
 # _main
 
