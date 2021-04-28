@@ -108,6 +108,7 @@ then
 	rm ~/.zshrc; ln -sv "$configDir"/.zshrc ~/ || echo "nepodarilo se nalinkovat .zshrc"
 	rm ~/.zshenv; ln -sv "$configDir"/.zshenv ~/ || echo "nepodarilo se nalinkovat .zshenv"
 	rm ~/.gdbinit; ln -sv "$configDir"/.gdbinit ~/ || echo "nepodarilo se nalinkovat .gdbinit"
+	rm ~/.pystartup; ln -sv "$configDir"/.pystartup ~/ || echo "nepodarilo se nalinkovat .pystartup"
 	touch ~/.pgpass && chmod 600 ~/.pgpass
 else
 	LogError "Nebyla nalezena slozka $configDir - je spravne naklonovany repozitar dotfiles?"
