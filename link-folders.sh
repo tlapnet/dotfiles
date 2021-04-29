@@ -62,7 +62,7 @@ sudo adduser "$USER" "$configGroup"
 Log "Overen, doplnen uzivatel do skupiny pro dotfiles"
 
 # instalace_acl_pro_setfacl
-if ! (sudo apt -y install acl 2> /dev/null || sudo yum install -y acl 2> /dev/null)
+if ! (sudo apt -y install vim zsh tmux mc git acl 2> /dev/null || sudo yum install -y acl 2> /dev/null)
 then
 	LogError "Nepodarilo se nainstalovat"
 	exit "$exitValue"
