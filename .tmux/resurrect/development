@@ -58,12 +58,12 @@ pane	shd-	9	:sql	0	:	1	:/home/vaclavz/Tlapnet/shaperd/sql	1	zsh	:
 pane	shd-	9	:sql	0	:	2	:/home/vaclavz/Tlapnet/wiki	0	zsh	:
 pane	testing	1	:testing	1	:*	1	:/home/vaclavz/Tlapnet/shaperd/testing	1	zsh	:
 pane	testing	2	:lib	0	:-	1	:/home/vaclavz/Tlapnet/shaperd/testing/lib	1	zsh	:
-pane	testing	3	:shd-admslave	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/shd-admslave	1	zsh	:
-pane	testing	4	:shd-monitord	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/shd-monitord	1	zsh	:
-pane	testing	5	:shd-netcheck	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/shd-netcheck	1	zsh	:
-pane	testing	6	:shd-qosd	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/shd-qosd	1	zsh	:
-pane	testing	7	:shd-tcd	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/shd-tcd	1	zsh	:
-pane	testing	8	:shd-webview	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/shd-webview	1	zsh	:
+pane	testing	3	:shd_admslave	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/shd-admslave	1	zsh	:
+pane	testing	4	:shd_monitord	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/shd-monitord	1	zsh	:
+pane	testing	5	:shd_netcheck	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/shd-netcheck	1	zsh	:
+pane	testing	6	:shd_qosd	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/shd-qosd	1	zsh	:
+pane	testing	7	:shd_tcd	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/shd-tcd	1	zsh	:
+pane	testing	8	:shd_webview	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/shd-webview	1	zsh	:
 pane	testing	9	:sql	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/sql	1	zsh	:
 window	0	1	1	:*	b3de,239x60,0,0,1
 window	F_shaperd	1	1	:*	b3df,239x60,0,0,2
