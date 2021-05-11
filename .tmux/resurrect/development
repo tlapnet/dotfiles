@@ -27,14 +27,18 @@ pane	TBot	8	:cpprest	0	:	1	:/home/vaclavz/Downloads/cpprestsdk/build.debug	1	zsh
 pane	TBot	8	:cpprest	0	:	2	:/home/vaclavz/Downloads/cpprestsdk/Release/include/cpprest/details	0	zsh	:
 pane	TBot	9	:extras	0	:-	1	:/home/vaclavz/Development/TBot/extras	1	zsh	:
 pane	Tlapnet	1	:nadhled	1	:*	1	:/home/vaclavz/Tlapnet/nadhled	1	zsh	:
-pane	Tlapnet	2	:nadhled-frontend	0	:	1	:/home/vaclavz/Tlapnet/nadhled/frontend	1	zsh	:
-pane	Tlapnet	3	:cetin-radius	0	:	1	:/home/vaclavz/Tlapnet/freeradius-cetin	1	zsh	:
-pane	Tlapnet	4	:tlapnet-radius	0	:	1	:/home/vaclavz/Tlapnet/freeradius-mysql	1	zsh	:
-pane	Tlapnet	4	:tlapnet-radius	0	:	2	:/home/vaclavz/Tlapnet/freeradius-mysql-vlasimnet	0	zsh	:
+pane	Tlapnet	2	:python-lib	0	:-	1	:/home/vaclavz/Tlapnet/python-lib	1	zsh	:
+pane	Tlapnet	3	:admmaster	1	:*	1	:/home/vaclavz/Tlapnet/admmaster	0	zsh	:
+pane	Tlapnet	3	:admmaster	1	:*	2	:/home/vaclavz/Tlapnet/admmaster/sql	1	zsh	:
+pane	Tlapnet	4	:freeradius	0	:	1	:/home/vaclavz/Tlapnet/freeradius	0	zsh	:
+pane	Tlapnet	4	:freeradius	0	:	2	:/home/vaclavz/Tlapnet/freeradius/cetin	0	zsh	:
+pane	Tlapnet	4	:freeradius	0	:	3	:/home/vaclavz/Tlapnet/freeradius/tlapnet	0	zsh	:
+pane	Tlapnet	4	:freeradius	0	:	4	:/home/vaclavz/Tlapnet/freeradius/vlasimnet	1	zsh	:
 pane	Tlapnet	5	:zabbix	0	:	1	:/home/vaclavz/Tlapnet/zabbix-monitoring	1	zsh	:
 pane	Tlapnet	5	:zabbix	0	:	2	:/home/vaclavz/Tlapnet/zabbix-partitioning	0	zsh	:
 pane	Tlapnet	6	:tlapnet-farm	0	:	1	:/home/vaclavz/Tlapnet/tlapnet-farm	1	zsh	:
 pane	Tlapnet	7	:dotfiles	0	:	1	:/home/vaclavz/Programming/dotfiles	1	zsh	:
+pane	Tlapnet	7	:dotfiles	0	:	2	:/usr/local/etc/dotfiles	0	zsh	:
 pane	Tlapnet	8	:dokumentace	0	:	1	:/home/vaclavz/Tlapnet/dokumentace	1	zsh	:
 pane	Tlapnet	9	:bash-scripts	0	:-	1	:/home/vaclavz/Programming/bash-scripts	1	zsh	:
 pane	shaperd	1	:shaperd	1	:*	1	:/home/vaclavz/Tlapnet/shaperd	1	zsh	:
@@ -64,6 +68,7 @@ pane	testing	5	:shd_netcheck	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/shd-ne
 pane	testing	6	:shd_qosd	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/shd-qosd	1	zsh	:
 pane	testing	7	:shd_tcd	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/shd-tcd	1	zsh	:
 pane	testing	8	:shd_webview	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/shd-webview	1	zsh	:
+pane	testing	8	:shd_webview	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/shd_webview	1	zsh	:
 pane	testing	9	:sql	0	:	1	:/home/vaclavz/Tlapnet/shaperd/testing/sql	1	zsh	:
 window	0	1	1	:*	b3de,239x60,0,0,1
 window	F_shaperd	1	1	:*	b3df,239x60,0,0,2
@@ -93,14 +98,14 @@ window	TBot	7	0	:	5a20,239x60,0,0,30
 window	TBot	8	0	:	749a,239x60,0,0{119x60,0,0,31,119x60,120,0,32}
 window	TBot	9	0	:-	5a23,239x60,0,0,33
 window	Tlapnet	1	1	:*	5a25,239x60,0,0,35
-window	Tlapnet	2	0	:	5a26,239x60,0,0,36
-window	Tlapnet	3	0	:	5a28,239x60,0,0,38
-window	Tlapnet	4	0	:	b49d,239x60,0,0{119x60,0,0,39,119x60,120,0,40}
+window	Tlapnet	2	0	:-	5a20,239x60,0,0,30
+window	Tlapnet	3	1	:*	f49e,239x60,0,0{119x60,0,0,32,119x60,120,0,78}
+window	Tlapnet	4	0	:	6074,239x60,0,0{119x60,0,0[119x30,0,0,31,119x29,0,31,76],119x60,120,0[119x30,120,0,74,119x29,120,31,75]}
 window	Tlapnet	5	0	:	f49a,239x60,0,0{119x60,0,0,41,119x60,120,0,42}
 window	Tlapnet	6	0	:	da23,239x60,0,0,43
 window	Tlapnet	7	0	:	da25,239x60,0,0,45
 window	Tlapnet	8	0	:	da26,239x60,0,0,46
-window	Tlapnet	9	0	:-	da27,239x60,0,0,47
+window	Tlapnet	9	0	:	da27,239x60,0,0,47
 window	shaperd	1	1	:*	da28,239x60,0,0,48
 window	shaperd	2	0	:	da29,239x60,0,0,49
 window	shaperd	3	0	:	da2a,239x60,0,0,88
@@ -119,9 +124,9 @@ window	shd-	6	0	:	da24,239x60,0,0,63
 window	shd-	7	0	:	da25,239x60,0,0,64
 window	shd-	8	0	:	da29,239x60,0,0,68
 window	shd-	9	0	:	f4a0,239x60,0,0{119x60,0,0,66,119x60,120,0,67}
-window	testing	1	1	:*	5a29,239x60,0,0,77
+window	testing	1	1	: 5a29,239x60,0,0,77
 window	testing	2	0	:-	5a28,239x60,0,0,76
-window	testing	3	0	:	5a2a,239x60,0,0,78
+window	testing	3	1	:*Z	349b,239x60,0,0{119x60,0,0,61,119x60,120,0,70}
 window	testing	4	0	:	da22,239x60,0,0,80
 window	testing	5	0	:	da27,239x60,0,0,85
 window	testing	6	0	:	5a2b,239x60,0,0,79
