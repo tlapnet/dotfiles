@@ -16,7 +16,7 @@ def Version():
     """
     Vypis verze prislusneho scriptu
     """
-    print("\033[92mversion: " + VERSION + "\033[5m\n")
+    print("\033[92mversion: " + VERSION + "\033[0m\n")
 # _Version
 
 
@@ -30,7 +30,7 @@ def Info():
 
     print("""\033[97m
 Informace:
-\033[5m""")
+\033[0m""")
 # _Info
 
 
