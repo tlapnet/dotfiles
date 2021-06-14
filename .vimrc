@@ -289,7 +289,7 @@ augroup split_screen_limit
 	"autocmd FileType text setlocal textwidth=110
 	"autocmd FileType text setlocal textwidth=150
 	"autocmd FileType text setlocal textwidth=100
-	autocmd FileType cpp,hpp,c,h,md setlocal textwidth=112
+	autocmd FileType cpp,hpp,c,h,md,py setlocal textwidth=112
 
 	" highlight lines longer than 100 chars
 	" highlights all characters exceeding limit of 100 on each line
@@ -301,8 +301,8 @@ augroup split_screen_limit
 	"autocmd BufEnter cpp,hpp,c,h,md highlight OverLength ctermbg=17
 	"autocmd BufEnter cpp,hpp,c,h,md match OverLength /\%112v.*/ |
 	" Pozor, nesmi se za timto uz menit nic kolem barev, ani schematu
-	autocmd FileType cpp,hpp,c,h,md highlight OverLength ctermbg=172
-	autocmd FileType cpp,hpp,c,h,md match OverLength /\%112v.*/ |
+	autocmd FileType cpp,hpp,c,h,md,py highlight OverLength ctermbg=172
+	autocmd FileType cpp,hpp,c,h,md,py match OverLength /\%112v.*/ |
 augroup END
 
 " F3 - ulozi vsechny otevrene soubory a zavola git commit -a
