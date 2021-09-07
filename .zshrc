@@ -134,6 +134,12 @@ LC_TELEPHONE=en_US.UTF-8
 LC_MEASUREMENT=en_US.UTF-8
 LC_IDENTIFICATION=en_US.UTF-8
 
+# for PostgreSQL set default pager to pspg if installed
+if which pspg &> /dev/null                             
+then                                                   
+  export PSQL_PAGER="pspg -s 0"                        
+fi
+
 #FUNCTION
 source ~/.zsh/functions
 
