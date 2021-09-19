@@ -1,22 +1,22 @@
 pane	0	1	:zsh	1	:*	1	:/home/vaclavz	1	zsh	:
-pane	shaperd	1	:shaperd	1	:*	1	:/root/shaperd	1	zsh	:
-pane	shaperd	2	:projects	0	:	1	:/root/shaperd	1	zsh	:
-pane	shaperd	2	:projects	0	:	2	:/root/shaperd/build	0	top	:top
-pane	shaperd	3	:atop	0	:	1	:/root/shaperd	1	atop	:atop
+pane	shaperd	1	:shaperd	0	:	1	:/root	1	zsh	:
+pane	shaperd	2	:projects	0	:	1	:/usr/local/src/shaperd	1	zsh	:
+pane	shaperd	2	:projects	0	:	2	:/usr/local/src/shaperd/build	0	zsh	:
+pane	shaperd	3	:atop	0	:	1	:/usr/local/src/shaperd	1	zsh	:
 pane	shaperd	4	:log	0	:	1	:/var/log/shaperd	1	zsh	:
-pane	shaperd	5	:freeradius	0	:	1	:/root/freeradius-mysql	1	zsh	:
+pane	shaperd	5	:freeradius	0	:	1	:/usr/local/src/freeradius-mysql	1	zsh	:
 pane	shaperd	6	:dump	0	:	1	:/var/spool/shaperd/dump	1	zsh	:
-pane	shaperd	7	:postgres	0	:	1	:/root/shaperd/sql	1	zsh	:
-pane	shaperd	8	:rsync	0	:	1	:/var/spool/shaperd/rsync	1	zsh	:
-pane	shaperd	9	:root	0	:-	1	:/root	1	zsh	:
-window	0	1	1	:*	d3dd,239x68,0,0,0
-window	shaperd	1	1	:*	d3de,239x68,0,0,1
-window	shaperd	2	0	:	d1fb,239x68,0,0{119x68,0,0,2,119x68,120,0,10}
-window	shaperd	3	0	:	d3e0,239x68,0,0,3
-window	shaperd	4	0	:	d3e1,239x68,0,0,4
-window	shaperd	5	0	:	d3e2,239x68,0,0,5
-window	shaperd	6	0	:	d3e3,239x68,0,0,6
-window	shaperd	7	0	:	d3e4,239x68,0,0,7
-window	shaperd	8	0	:	d3e5,239x68,0,0,8
-window	shaperd	9	0	:-	d3e6,239x68,0,0,9
-state	shaperd	
+pane	shaperd	7	:postgres	0	:	1	:/usr/local/src/shaperd/sql	1	zsh	:
+pane	shaperd	8	:rsync	0	:-	1	:/var/spool/shaperd/rsync	1	zsh	:
+pane	shaperd	9	:root	1	:*	1	:/root	1	zsh	:
+window	0	1	1	:*	d1de,239x58,0,0,1
+window	shaperd	1	0	:	d1df,239x58,0,0,2
+window	shaperd	2	0	:	e10c,239x58,0,0{119x58,0,0,3,119x58,120,0,4}
+window	shaperd	3	0	:	d1e2,239x58,0,0,5
+window	shaperd	4	0	:	d1e3,239x58,0,0,6
+window	shaperd	5	0	:	d1e4,239x58,0,0,7
+window	shaperd	6	0	:	d1e5,239x58,0,0,8
+window	shaperd	7	0	:	d1e6,239x58,0,0,9
+window	shaperd	8	0	:-	691f,239x58,0,0,10
+window	shaperd	9	1	:*	6920,239x58,0,0,11
+state	shaperd	0
