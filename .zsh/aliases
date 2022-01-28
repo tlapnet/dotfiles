@@ -57,3 +57,6 @@ alias rebuildYCM='~/.vim/bundle/YouCompleteMe/install.py --clang-completer'
 
 # slouzi pro alias pro ipv6
 alias ip6='ip -6'
+
+# rychle prepnuti na roota a otevreni tmuxu
+alias sta='sudo -s tmux attach'
